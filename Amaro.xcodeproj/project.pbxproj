@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CE5568BC5F90D648B0224AB /* Pods_Amaro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23FEE86F37BB0EABFFC797E /* Pods_Amaro.framework */; };
+		8252BB271E420EBE00E4E44D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB261E420EBE00E4E44D /* AppDelegate.swift */; };
+		8252BB291E420EBE00E4E44D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB281E420EBE00E4E44D /* HomeController.swift */; };
+		8252BB2C1E420EBE00E4E44D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8252BB2A1E420EBE00E4E44D /* Main.storyboard */; };
+		8252BB2E1E420EBE00E4E44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8252BB2D1E420EBE00E4E44D /* Assets.xcassets */; };
+		8252BB311E420EBE00E4E44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8252BB2F1E420EBE00E4E44D /* LaunchScreen.storyboard */; };
+		8252BB3C1E420EBE00E4E44D /* AmaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB3B1E420EBE00E4E44D /* AmaroTests.swift */; };
+		8252BB471E420EBE00E4E44D /* AmaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB461E420EBE00E4E44D /* AmaroUITests.swift */; };
+		8252BB581E42130100E4E44D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB571E42130100E4E44D /* Product.swift */; };
+		8252BB5B1E42132700E4E44D /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB5A1E42132700E4E44D /* Size.swift */; };
+		8252BB5D1E42139700E4E44D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB5C1E42139700E4E44D /* Constants.swift */; };
+		8252BB5F1E4213B900E4E44D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB5E1E4213B900E4E44D /* Extensions.swift */; };
+		8252BB611E4213F400E4E44D /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB601E4213F400E4E44D /* Requests.swift */; };
+		8252BB631E42141600E4E44D /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 8252BB621E42141600E4E44D /* products.json */; };
+		8252BB661E42148100E4E44D /* UltravisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB651E42148100E4E44D /* UltravisualLayout.swift */; };
+		8252BB681E42167A00E4E44D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB671E42167A00E4E44D /* DetailsViewController.swift */; };
+		8252BB6A1E4216E100E4E44D /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB691E4216E100E4E44D /* HomeCollectionViewCell.swift */; };
+		8252BB6D1E42171A00E4E44D /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB6C1E42171A00E4E44D /* PhotoTableViewCell.swift */; };
+		8252BB6F1E42175100E4E44D /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB6E1E42175100E4E44D /* DetailsTableViewCell.swift */; };
+		8252BB711E42177F00E4E44D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB701E42177F00E4E44D /* CustomButton.swift */; };
+		8252BB731E421F7700E4E44D /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB721E421F7700E4E44D /* PickerView.swift */; };
+		8252BB771E4256D000E4E44D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB761E4256D000E4E44D /* CustomTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8252BB381E420EBE00E4E44D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8252BB1B1E420EBD00E4E44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8252BB221E420EBD00E4E44D;
+			remoteInfo = Amaro;
+		};
+		8252BB431E420EBE00E4E44D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8252BB1B1E420EBD00E4E44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8252BB221E420EBD00E4E44D;
+			remoteInfo = Amaro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C5948068C5EEE72D70C9E54 /* Pods-Amaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amaro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Amaro/Pods-Amaro.debug.xcconfig"; sourceTree = "<group>"; };
+		4CD88C4228BFBBCD2EE52E32 /* Pods-Amaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amaro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Amaro/Pods-Amaro.release.xcconfig"; sourceTree = "<group>"; };
+		8252BB231E420EBE00E4E44D /* Amaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8252BB261E420EBE00E4E44D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8252BB281E420EBE00E4E44D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		8252BB2B1E420EBE00E4E44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8252BB2D1E420EBE00E4E44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8252BB301E420EBE00E4E44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8252BB321E420EBE00E4E44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8252BB371E420EBE00E4E44D /* AmaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8252BB3B1E420EBE00E4E44D /* AmaroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmaroTests.swift; sourceTree = "<group>"; };
+		8252BB3D1E420EBE00E4E44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8252BB421E420EBE00E4E44D /* AmaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8252BB461E420EBE00E4E44D /* AmaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmaroUITests.swift; sourceTree = "<group>"; };
+		8252BB481E420EBE00E4E44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8252BB571E42130100E4E44D /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Model/Product.swift; sourceTree = "<group>"; };
+		8252BB5A1E42132700E4E44D /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Model/Size.swift; sourceTree = "<group>"; };
+		8252BB5C1E42139700E4E44D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Support/Constants.swift; sourceTree = "<group>"; };
+		8252BB5E1E4213B900E4E44D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Support/Extensions.swift; sourceTree = "<group>"; };
+		8252BB601E4213F400E4E44D /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requests.swift; path = Support/Requests.swift; sourceTree = "<group>"; };
+		8252BB621E42141600E4E44D /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		8252BB651E42148100E4E44D /* UltravisualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltravisualLayout.swift; sourceTree = "<group>"; };
+		8252BB671E42167A00E4E44D /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = Controller/DetailsViewController.swift; sourceTree = "<group>"; };
+		8252BB691E4216E100E4E44D /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCollectionViewCell.swift; path = View/HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8252BB6C1E42171A00E4E44D /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTableViewCell.swift; path = View/PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		8252BB6E1E42175100E4E44D /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsTableViewCell.swift; path = View/DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		8252BB701E42177F00E4E44D /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = View/CustomButton.swift; sourceTree = "<group>"; };
+		8252BB721E421F7700E4E44D /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerView.swift; path = View/PickerView.swift; sourceTree = "<group>"; };
+		8252BB741E4247B900E4E44D /* playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = playground.playground; path = Support/playground.playground; sourceTree = "<group>"; };
+		8252BB761E4256D000E4E44D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = View/CustomTextField.swift; sourceTree = "<group>"; };
+		A23FEE86F37BB0EABFFC797E /* Pods_Amaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Amaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8252BB201E420EBD00E4E44D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE5568BC5F90D648B0224AB /* Pods_Amaro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8252BB341E420EBE00E4E44D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8252BB3F1E420EBE00E4E44D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74FA1DC3B1922EEB20DB5378 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A23FEE86F37BB0EABFFC797E /* Pods_Amaro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8252BB1A1E420EBD00E4E44D = {
+			isa = PBXGroup;
+			children = (
+				8252BB251E420EBE00E4E44D /* Amaro */,
+				8252BB3A1E420EBE00E4E44D /* AmaroTests */,
+				8252BB451E420EBE00E4E44D /* AmaroUITests */,
+				8252BB241E420EBE00E4E44D /* Products */,
+				F44624DF2F925C3E016C110E /* Pods */,
+				74FA1DC3B1922EEB20DB5378 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8252BB241E420EBE00E4E44D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB231E420EBE00E4E44D /* Amaro.app */,
+				8252BB371E420EBE00E4E44D /* AmaroTests.xctest */,
+				8252BB421E420EBE00E4E44D /* AmaroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8252BB251E420EBE00E4E44D /* Amaro */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB541E420F2800E4E44D /* UI */,
+				8252BB591E42130800E4E44D /* Model */,
+				8252BB6B1E4216E500E4E44D /* View */,
+				8252BB561E420F4000E4E44D /* Controller */,
+				8252BB551E420F3500E4E44D /* Support */,
+			);
+			path = Amaro;
+			sourceTree = "<group>";
+		};
+		8252BB3A1E420EBE00E4E44D /* AmaroTests */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB3B1E420EBE00E4E44D /* AmaroTests.swift */,
+				8252BB3D1E420EBE00E4E44D /* Info.plist */,
+			);
+			path = AmaroTests;
+			sourceTree = "<group>";
+		};
+		8252BB451E420EBE00E4E44D /* AmaroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB461E420EBE00E4E44D /* AmaroUITests.swift */,
+				8252BB481E420EBE00E4E44D /* Info.plist */,
+			);
+			path = AmaroUITests;
+			sourceTree = "<group>";
+		};
+		8252BB541E420F2800E4E44D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB2A1E420EBE00E4E44D /* Main.storyboard */,
+				8252BB2F1E420EBE00E4E44D /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		8252BB551E420F3500E4E44D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB261E420EBE00E4E44D /* AppDelegate.swift */,
+				8252BB5C1E42139700E4E44D /* Constants.swift */,
+				8252BB5E1E4213B900E4E44D /* Extensions.swift */,
+				8252BB601E4213F400E4E44D /* Requests.swift */,
+				8252BB621E42141600E4E44D /* products.json */,
+				8252BB321E420EBE00E4E44D /* Info.plist */,
+				8252BB741E4247B900E4E44D /* playground.playground */,
+				8252BB751E424B1300E4E44D /* Resources */,
+				8252BB641E42148100E4E44D /* Layouts */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		8252BB561E420F4000E4E44D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB281E420EBE00E4E44D /* HomeController.swift */,
+				8252BB671E42167A00E4E44D /* DetailsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8252BB591E42130800E4E44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB571E42130100E4E44D /* Product.swift */,
+				8252BB5A1E42132700E4E44D /* Size.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8252BB641E42148100E4E44D /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB651E42148100E4E44D /* UltravisualLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		8252BB6B1E4216E500E4E44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB691E4216E100E4E44D /* HomeCollectionViewCell.swift */,
+				8252BB6C1E42171A00E4E44D /* PhotoTableViewCell.swift */,
+				8252BB6E1E42175100E4E44D /* DetailsTableViewCell.swift */,
+				8252BB701E42177F00E4E44D /* CustomButton.swift */,
+				8252BB761E4256D000E4E44D /* CustomTextField.swift */,
+				8252BB721E421F7700E4E44D /* PickerView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8252BB751E424B1300E4E44D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB2D1E420EBE00E4E44D /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F44624DF2F925C3E016C110E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C5948068C5EEE72D70C9E54 /* Pods-Amaro.debug.xcconfig */,
+				4CD88C4228BFBBCD2EE52E32 /* Pods-Amaro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8252BB221E420EBD00E4E44D /* Amaro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8252BB4B1E420EBE00E4E44D /* Build configuration list for PBXNativeTarget "Amaro" */;
+			buildPhases = (
+				E5AAD934DE05BA49B637728B /* [CP] Check Pods Manifest.lock */,
+				8252BB1F1E420EBD00E4E44D /* Sources */,
+				8252BB201E420EBD00E4E44D /* Frameworks */,
+				8252BB211E420EBD00E4E44D /* Resources */,
+				31EBB343F1D1BD2F309BAD24 /* [CP] Embed Pods Frameworks */,
+				FEB63F8A4DF6A18CC88A10E9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Amaro;
+			productName = Amaro;
+			productReference = 8252BB231E420EBE00E4E44D /* Amaro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8252BB361E420EBE00E4E44D /* AmaroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8252BB4E1E420EBE00E4E44D /* Build configuration list for PBXNativeTarget "AmaroTests" */;
+			buildPhases = (
+				8252BB331E420EBE00E4E44D /* Sources */,
+				8252BB341E420EBE00E4E44D /* Frameworks */,
+				8252BB351E420EBE00E4E44D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8252BB391E420EBE00E4E44D /* PBXTargetDependency */,
+			);
+			name = AmaroTests;
+			productName = AmaroTests;
+			productReference = 8252BB371E420EBE00E4E44D /* AmaroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8252BB411E420EBE00E4E44D /* AmaroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8252BB511E420EBE00E4E44D /* Build configuration list for PBXNativeTarget "AmaroUITests" */;
+			buildPhases = (
+				8252BB3E1E420EBE00E4E44D /* Sources */,
+				8252BB3F1E420EBE00E4E44D /* Frameworks */,
+				8252BB401E420EBE00E4E44D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8252BB441E420EBE00E4E44D /* PBXTargetDependency */,
+			);
+			name = AmaroUITests;
+			productName = AmaroUITests;
+			productReference = 8252BB421E420EBE00E4E44D /* AmaroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8252BB1B1E420EBD00E4E44D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = limadeveloper;
+				TargetAttributes = {
+					8252BB221E420EBD00E4E44D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G9572JBENB;
+						ProvisioningStyle = Automatic;
+					};
+					8252BB361E420EBE00E4E44D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G9572JBENB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8252BB221E420EBD00E4E44D;
+					};
+					8252BB411E420EBE00E4E44D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G9572JBENB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8252BB221E420EBD00E4E44D;
+					};
+				};
+			};
+			buildConfigurationList = 8252BB1E1E420EBD00E4E44D /* Build configuration list for PBXProject "Amaro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8252BB1A1E420EBD00E4E44D;
+			productRefGroup = 8252BB241E420EBE00E4E44D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8252BB221E420EBD00E4E44D /* Amaro */,
+				8252BB361E420EBE00E4E44D /* AmaroTests */,
+				8252BB411E420EBE00E4E44D /* AmaroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8252BB211E420EBD00E4E44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8252BB311E420EBE00E4E44D /* LaunchScreen.storyboard in Resources */,
+				8252BB631E42141600E4E44D /* products.json in Resources */,
+				8252BB2E1E420EBE00E4E44D /* Assets.xcassets in Resources */,
+				8252BB2C1E420EBE00E4E44D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8252BB351E420EBE00E4E44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8252BB401E420EBE00E4E44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31EBB343F1D1BD2F309BAD24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Amaro/Pods-Amaro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5AAD934DE05BA49B637728B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB63F8A4DF6A18CC88A10E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Amaro/Pods-Amaro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8252BB1F1E420EBD00E4E44D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8252BB711E42177F00E4E44D /* CustomButton.swift in Sources */,
+				8252BB5D1E42139700E4E44D /* Constants.swift in Sources */,
+				8252BB5F1E4213B900E4E44D /* Extensions.swift in Sources */,
+				8252BB681E42167A00E4E44D /* DetailsViewController.swift in Sources */,
+				8252BB5B1E42132700E4E44D /* Size.swift in Sources */,
+				8252BB291E420EBE00E4E44D /* HomeController.swift in Sources */,
+				8252BB6A1E4216E100E4E44D /* HomeCollectionViewCell.swift in Sources */,
+				8252BB6F1E42175100E4E44D /* DetailsTableViewCell.swift in Sources */,
+				8252BB661E42148100E4E44D /* UltravisualLayout.swift in Sources */,
+				8252BB271E420EBE00E4E44D /* AppDelegate.swift in Sources */,
+				8252BB611E4213F400E4E44D /* Requests.swift in Sources */,
+				8252BB581E42130100E4E44D /* Product.swift in Sources */,
+				8252BB731E421F7700E4E44D /* PickerView.swift in Sources */,
+				8252BB6D1E42171A00E4E44D /* PhotoTableViewCell.swift in Sources */,
+				8252BB771E4256D000E4E44D /* CustomTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8252BB331E420EBE00E4E44D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8252BB3C1E420EBE00E4E44D /* AmaroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8252BB3E1E420EBE00E4E44D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8252BB471E420EBE00E4E44D /* AmaroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8252BB391E420EBE00E4E44D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8252BB221E420EBD00E4E44D /* Amaro */;
+			targetProxy = 8252BB381E420EBE00E4E44D /* PBXContainerItemProxy */;
+		};
+		8252BB441E420EBE00E4E44D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8252BB221E420EBD00E4E44D /* Amaro */;
+			targetProxy = 8252BB431E420EBE00E4E44D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8252BB2A1E420EBE00E4E44D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8252BB2B1E420EBE00E4E44D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8252BB2F1E420EBE00E4E44D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8252BB301E420EBE00E4E44D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8252BB491E420EBE00E4E44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8252BB4A1E420EBE00E4E44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8252BB4C1E420EBE00E4E44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5948068C5EEE72D70C9E54 /* Pods-Amaro.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G9572JBENB;
+				INFOPLIST_FILE = Amaro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.amaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8252BB4D1E420EBE00E4E44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD88C4228BFBBCD2EE52E32 /* Pods-Amaro.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G9572JBENB;
+				INFOPLIST_FILE = Amaro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.amaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8252BB4F1E420EBE00E4E44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G9572JBENB;
+				INFOPLIST_FILE = AmaroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limadeveloper.AmaroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amaro.app/Amaro";
+			};
+			name = Debug;
+		};
+		8252BB501E420EBE00E4E44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G9572JBENB;
+				INFOPLIST_FILE = AmaroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limadeveloper.AmaroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amaro.app/Amaro";
+			};
+			name = Release;
+		};
+		8252BB521E420EBE00E4E44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = G9572JBENB;
+				INFOPLIST_FILE = AmaroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limadeveloper.AmaroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Amaro;
+			};
+			name = Debug;
+		};
+		8252BB531E420EBE00E4E44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = G9572JBENB;
+				INFOPLIST_FILE = AmaroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limadeveloper.AmaroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Amaro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8252BB1E1E420EBD00E4E44D /* Build configuration list for PBXProject "Amaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8252BB491E420EBE00E4E44D /* Debug */,
+				8252BB4A1E420EBE00E4E44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8252BB4B1E420EBE00E4E44D /* Build configuration list for PBXNativeTarget "Amaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8252BB4C1E420EBE00E4E44D /* Debug */,
+				8252BB4D1E420EBE00E4E44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8252BB4E1E420EBE00E4E44D /* Build configuration list for PBXNativeTarget "AmaroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8252BB4F1E420EBE00E4E44D /* Debug */,
+				8252BB501E420EBE00E4E44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8252BB511E420EBE00E4E44D /* Build configuration list for PBXNativeTarget "AmaroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8252BB521E420EBE00E4E44D /* Debug */,
+				8252BB531E420EBE00E4E44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8252BB1B1E420EBD00E4E44D /* Project object */;
+}
