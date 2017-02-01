@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="dW0-IX-V0s" customClass="UltravisualLayout" customModule="Amaro" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="dW0-IX-V0s" customClass="UltraVisualLayout" customModule="Amaro" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Nap-uY-3He" customClass="HomeCollectionViewCell" customModule="Amaro" customModuleProvider="target">
                                 <rect key="frame" x="60" y="0.0" width="200" height="200"/>

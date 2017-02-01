@@ -43,8 +43,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
         
-        let featuredHeight = UltravisualLayoutConstants.Cell.featuredHeight
-        let standardHeight = UltravisualLayoutConstants.Cell.standardHeight
+        let featuredHeight = UltraVisualLayoutConstants.Cell.featuredHeight
+        let standardHeight = UltraVisualLayoutConstants.Cell.standardHeight
         
         let delta = 1 - ((featuredHeight - frame.height) / (featuredHeight - standardHeight))
         

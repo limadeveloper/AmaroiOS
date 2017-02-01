@@ -1,5 +1,5 @@
 //
-//  UltravisualLayout.swift
+//  UltraVisualLayout.swift
 //  RWDevCon
 //
 //  Created by Mic Pringle on 27/02/2015.
@@ -10,7 +10,7 @@
 import UIKit
 
 /// The heights are declared as constants outside of the class so they can be easily referenced elsewhere
-struct UltravisualLayoutConstants {
+struct UltraVisualLayoutConstants {
     
     /**
      * standardHeight: The height of the non-featured cell
@@ -22,7 +22,7 @@ struct UltravisualLayoutConstants {
     }
 }
 
-class UltravisualLayout: UICollectionViewLayout {
+class UltraVisualLayout: UICollectionViewLayout {
     
     // MARK: - Properties and Variables
     /// The amount the user needs to scroll before the featured cell changes
@@ -81,8 +81,8 @@ class UltravisualLayout: UICollectionViewLayout {
         
         cache.removeAll(keepingCapacity: false)
         
-        let standardHeight = UltravisualLayoutConstants.Cell.standardHeight
-        let featuredHeight = UltravisualLayoutConstants.Cell.featuredHeight
+        let standardHeight = UltraVisualLayoutConstants.Cell.standardHeight
+        let featuredHeight = UltraVisualLayoutConstants.Cell.featuredHeight
         
         var frame = CGRect.zero
         var y: CGFloat = 0
