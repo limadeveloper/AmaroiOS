@@ -5,8 +5,10 @@
 //  Created by John Lima on 01/02/17.
 //  Copyright © 2017 limadeveloper. All rights reserved.
 //
+// https://github.com/gmertk/GMStepper
 
 import UIKit
+import GMStepper
 
 class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControllerDelegate {
     
@@ -19,6 +21,7 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
     @IBOutlet fileprivate weak var secondPriceValueLabelConstraintHorizontalSpace: NSLayoutConstraint!
     @IBOutlet fileprivate weak var sizeLabel: UILabel!
     @IBOutlet fileprivate weak var sizesTextField: CustomTextField!
+    @IBOutlet fileprivate weak var amountStepper: UIView!
     
     fileprivate var price: String?
     
@@ -121,7 +124,7 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
     func detailsControllerGetCheckoutData() -> Checkout? {
         guard let product = product, let sizeName = sizesTextField.text, !sizeName.isEmpty else { return nil }
         guard let size = Size.getSizeFrom(name: sizeName, and: product), let price = price else { return nil }
-        let checkout = Checkout(product: product, size: size, amount: , price: price)
-        return checkout
+        //let checkout = Checkout(product: product, size: size, amount: , price: price)
+        return nil
     }
 }

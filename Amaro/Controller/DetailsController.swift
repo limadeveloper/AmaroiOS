@@ -28,7 +28,7 @@ class DetailsController: UIViewController, UITableViewDataSource, UITableViewDel
     struct Cell {
         struct Details {
             static let rowHeight1: CGFloat = 118
-            static let rowHeight2: CGFloat = 156
+            static let rowHeight2: CGFloat = 179
         }
         struct Photo {
             static var rowHeight: CGFloat = keyWindow.frame.size.height - Details.rowHeight1

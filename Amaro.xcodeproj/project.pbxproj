@@ -232,14 +232,12 @@
 		8252BB6B1E4216E500E4E44D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8252BB691E4216E100E4E44D /* HomeCollectionViewCell.swift */,
-				8252BB6C1E42171A00E4E44D /* PhotoTableViewCell.swift */,
-				8252BB6E1E42175100E4E44D /* DetailsTableViewCell.swift */,
 				8252BB701E42177F00E4E44D /* CustomButton.swift */,
 				8252BB761E4256D000E4E44D /* CustomTextField.swift */,
 				82A49AFD1E42D1520006929D /* CustomLabel.swift */,
 				8238CE731E43A21200C77C48 /* CustomView.swift */,
 				8252BB721E421F7700E4E44D /* PickerView.swift */,
+				828CC73C1E43D17200B2159C /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +248,16 @@
 				8252BB2D1E420EBE00E4E44D /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		828CC73C1E43D17200B2159C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8252BB691E4216E100E4E44D /* HomeCollectionViewCell.swift */,
+				8252BB6C1E42171A00E4E44D /* PhotoTableViewCell.swift */,
+				8252BB6E1E42175100E4E44D /* DetailsTableViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		F44624DF2F925C3E016C110E /* Pods */ = {
