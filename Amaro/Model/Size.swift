@@ -32,4 +32,10 @@ extension Size {
     static func getSizeFrom(json: JSON) -> Size? {
         return Size(json: json)
     }
+    
+    static func getSizeFrom(name: String, and product: Product) -> Size? {
+        guard let sizes = product.sizes, sizes.count > 0 else { return nil }
+        let size = sizes.filter({ $0.size == name }).first
+        return size
+    }
 }

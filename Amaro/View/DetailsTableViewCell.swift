@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailsTableViewCell: UITableViewCell, PickerViewDelegate {
+class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControllerDelegate {
     
     @IBOutlet fileprivate weak var nameLabel: UILabel!
     @IBOutlet fileprivate weak var firstPriceNameLabel: UILabel!
@@ -73,6 +73,13 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate {
             
             guard let options = sizes else { return }
             sizesTextField.inputView = PickerView(options: options, delegate: self, image: productImage)
+            sizesTextField.text = options.first
+        }
+    }
+    
+    var detailsController: DetailsController? {
+        didSet {
+            detailsController?.delegate = self
         }
     }
     
@@ -102,5 +109,13 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate {
     
     func prickerViewDismiss() {
         sizesTextField.resignFirstResponder()
+    }
+    
+    // MARK: - DetailsController Delegate
+    func detailsControllerGetCheckoutData() -> Checkout? {
+        guard let product = product, let sizeName = sizesTextField.text, !sizeName.isEmpty else { return nil }
+        guard let size = Size.getSizeFrom(name: sizeName, and: product) else { return nil }
+        let checkout = Checkout(product: product, size: size)
+        return checkout
     }
 }

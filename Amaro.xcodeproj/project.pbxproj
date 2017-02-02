@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CE5568BC5F90D648B0224AB /* Pods_Amaro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23FEE86F37BB0EABFFC797E /* Pods_Amaro.framework */; };
+		8238CE721E435A6600C77C48 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238CE711E435A6600C77C48 /* Checkout.swift */; };
 		8252BB271E420EBE00E4E44D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB261E420EBE00E4E44D /* AppDelegate.swift */; };
 		8252BB291E420EBE00E4E44D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB281E420EBE00E4E44D /* HomeController.swift */; };
 		8252BB2C1E420EBE00E4E44D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8252BB2A1E420EBE00E4E44D /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		2C5948068C5EEE72D70C9E54 /* Pods-Amaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amaro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Amaro/Pods-Amaro.debug.xcconfig"; sourceTree = "<group>"; };
 		4CD88C4228BFBBCD2EE52E32 /* Pods-Amaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amaro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Amaro/Pods-Amaro.release.xcconfig"; sourceTree = "<group>"; };
+		8238CE711E435A6600C77C48 /* Checkout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
 		8252BB231E420EBE00E4E44D /* Amaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8252BB261E420EBE00E4E44D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8252BB281E420EBE00E4E44D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				8252BB571E42130100E4E44D /* Product.swift */,
 				8252BB5A1E42132700E4E44D /* Size.swift */,
+				8238CE711E435A6600C77C48 /* Checkout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				8252BB711E42177F00E4E44D /* CustomButton.swift in Sources */,
 				8252BB5D1E42139700E4E44D /* Constants.swift in Sources */,
 				8252BB5F1E4213B900E4E44D /* Extensions.swift in Sources */,
+				8238CE721E435A6600C77C48 /* Checkout.swift in Sources */,
 				8252BB681E42167A00E4E44D /* DetailsController.swift in Sources */,
 				8252BB5B1E42132700E4E44D /* Size.swift in Sources */,
 				82A49B001E42D69A0006929D /* CheckoutController.swift in Sources */,

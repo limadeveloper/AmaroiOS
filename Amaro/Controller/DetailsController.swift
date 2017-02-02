@@ -9,6 +9,10 @@
 import UIKit
 import AlamofireImage
 
+protocol DetailsControllerDelegate {
+    func detailsControllerGetCheckoutData() -> Checkout?
+}
+
 class DetailsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Properties
@@ -19,6 +23,7 @@ class DetailsController: UIViewController, UITableViewDataSource, UITableViewDel
     fileprivate var productImage: UIImage?
     
     var product: Product?
+    var delegate: DetailsControllerDelegate?
     
     struct Cell {
         struct Details {
@@ -47,6 +52,9 @@ class DetailsController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let storyboard = UIStoryboard(name: UI.StoryboardName.main, bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: UI.ControllerIdentifier.checkout) as? CheckoutController
+        
+        let checkout = delegate?.detailsControllerGetCheckoutData()
+        controller?.checkout = checkout
         
         if let controller = controller {
             present(controller, animated: true, completion: nil)
@@ -87,14 +95,15 @@ extension DetailsController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
-        case 0:
+        case 0: // Photos
             let cell = tableView.dequeueReusableCell(withIdentifier: photoCell, for: indexPath) as! PhotoTableViewCell
             cell.product = product
             return cell
-        case 1:
+        case 1: // Details
             let cell = tableView.dequeueReusableCell(withIdentifier: detailsCell, for: indexPath) as! DetailsTableViewCell
             cell.productImage = productImage
             cell.product = product
+            cell.detailsController = self
             return cell
         default:
             return UITableViewCell()
