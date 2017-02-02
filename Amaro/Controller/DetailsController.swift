@@ -1,5 +1,5 @@
 //
-//  DetailsViewController.swift
+//  DetailsController.swift
 //  Amaro
 //
 //  Created by John Lima on 01/02/17.
@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class DetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DetailsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Properties
     @IBOutlet fileprivate weak var tableView: UITableView!
@@ -43,6 +43,16 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction fileprivate func checkout() {
+        
+        let storyboard = UIStoryboard(name: UI.StoryboardName.main, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: UI.ControllerIdentifier.checkout) as? CheckoutController
+        
+        if let controller = controller {
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
     fileprivate func updateUI() {
         
         let background = UIView(frame: .zero)
@@ -64,7 +74,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 }
 
-extension DetailsViewController {
+extension DetailsController {
     
     // MARK: - TableView DataSource
     func numberOfSections(in tableView: UITableView) -> Int {

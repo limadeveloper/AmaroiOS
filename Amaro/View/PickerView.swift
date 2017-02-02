@@ -63,30 +63,36 @@ class PickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
         self.options = options
         self.delegate = delegate as? PickerViewDelegate
         
+        if let image = image {
+            self.backgroundColor = UIColor(patternImage: image)
+        }
+        
         picker.frame = CGRect(x: 0, y: ToolBar.height, width: self.frame.size.width, height: pickerHeight)
-        picker.backgroundColor = .white
         picker.delegate = self
         picker.dataSource = self
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: ToolBar.height))
         toolbar.isTranslucent = true
+        toolbar.barStyle = .black
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         cancelButton = UIBarButtonItem(title: ToolBar.Button.cancelTitle, style: .plain, target: self, action: #selector(cancel))
-        cancelButton.tintColor = Colors.red
+        cancelButton.tintColor = .white
         cancelButton.setTitleTextAttributes([NSFontAttributeName: Font.defaultBold(size: Font.Size.regular)!], for: .normal)
         
         doneButton = UIBarButtonItem(title: ToolBar.Button.doneTitle, style: .plain, target: self, action: #selector(done))
-        doneButton.tintColor = Colors.dark
+        doneButton.tintColor = .white
         doneButton.setTitleTextAttributes([NSFontAttributeName: Font.defaultBold(size: Font.Size.regular)!], for: .normal)
         
         toolbar.setItems([cancelButton, flexibleSpace, doneButton], animated: false)
         
         let imageView = UIImageView(frame: self.bounds)
         imageView.image = image
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        imageView.addBlurEffect()
+        imageView.addBlurEffect(style: .dark)
         
         DispatchQueue.main.async {
             self.addSubview(imageView)

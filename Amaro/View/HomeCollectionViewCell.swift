@@ -18,6 +18,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet fileprivate weak var colorLabel: UILabel!
     @IBOutlet fileprivate weak var imageViewConstraintHeight: NSLayoutConstraint!
     @IBOutlet fileprivate weak var titleLabelConstraintHeight: NSLayoutConstraint!
+    @IBOutlet weak var menuButton: UIButton!
     
     var product: Product? {
         didSet {

@@ -22,7 +22,7 @@ struct Font {
     }
     
     struct Size {
-        static let small: CGFloat = 14
+        static let small: CGFloat = 15
         static let regular: CGFloat = 17
         static let Bigger: CGFloat = 38
     }
@@ -50,7 +50,7 @@ struct Titles {
     static let price = "Preço"
     static let promoPrice = "Promoção"
     static let total = "Total"
-    static let sizes = "Tamanhos"
+    static let sizes = "Tamanho"
     static let oldName = "De"
     static let newName = "Por"
 }
@@ -63,6 +63,18 @@ struct ButtonTitle {
     static let ok = "Ok"
 }
 
+struct UI {
+    
+    struct StoryboardName {
+        static let main = "Main"
+    }
+    
+    struct ControllerIdentifier {
+        static let checkout = "checkout"
+    }
+}
+
 enum JsonFile: String {
     case products = "products"
 }
+

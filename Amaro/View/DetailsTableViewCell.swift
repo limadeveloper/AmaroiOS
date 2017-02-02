@@ -17,6 +17,7 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate {
     @IBOutlet fileprivate weak var secondPriceValueLabel: UILabel!
     @IBOutlet fileprivate weak var secondPriceNameLabelConstraintWidth: NSLayoutConstraint!
     @IBOutlet fileprivate weak var secondPriceValueLabelConstraintHorizontalSpace: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var sizeLabel: UILabel!
     @IBOutlet fileprivate weak var sizesTextField: CustomTextField!
     
     var productImage: UIImage?
@@ -26,6 +27,7 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate {
             
             firstPriceNameLabel.text = "\(Titles.price):"
             secondPriceNameLabel.text = "\(Titles.price):"
+            sizeLabel.text = "\(Titles.sizes):"
             
             firstPriceValueLabel.text = product?.price
             secondPriceValueLabel.text = product?.pricePromo

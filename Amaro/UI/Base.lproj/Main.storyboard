@@ -64,11 +64,21 @@
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <state key="normal" image="promo"/>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYb-nE-eP3">
+                                            <rect key="frame" x="15" y="22" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="Dql-92-bKy"/>
+                                                <constraint firstAttribute="width" constant="35" id="Fsi-TM-VrI"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" image="Menu-100"/>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="nBa-SR-f12" firstAttribute="leading" secondItem="Nap-uY-3He" secondAttribute="leading" id="1XF-cm-x0Z"/>
                                     <constraint firstItem="lk3-bX-gzb" firstAttribute="top" secondItem="Nap-uY-3He" secondAttribute="top" id="7LR-4a-nJH"/>
+                                    <constraint firstItem="gYb-nE-eP3" firstAttribute="top" secondItem="Nap-uY-3He" secondAttribute="top" constant="22" id="7Ln-jH-gLM"/>
                                     <constraint firstItem="jET-7V-zUG" firstAttribute="leading" secondItem="Nap-uY-3He" secondAttribute="leading" id="E7c-J8-a7d"/>
                                     <constraint firstItem="nBa-SR-f12" firstAttribute="top" secondItem="jET-7V-zUG" secondAttribute="bottom" id="GDU-Bg-gaG"/>
                                     <constraint firstAttribute="trailing" secondItem="lk3-bX-gzb" secondAttribute="trailing" id="R27-mj-aCu"/>
@@ -82,6 +92,7 @@
                                     <constraint firstAttribute="centerY" secondItem="jET-7V-zUG" secondAttribute="centerY" id="qrT-1L-OL7"/>
                                     <constraint firstAttribute="bottom" secondItem="lk3-bX-gzb" secondAttribute="bottom" id="tov-Mv-Maq"/>
                                     <constraint firstAttribute="centerY" secondItem="qUB-oE-1mN" secondAttribute="centerY" id="ugY-dC-cBw"/>
+                                    <constraint firstItem="gYb-nE-eP3" firstAttribute="leading" secondItem="Nap-uY-3He" secondAttribute="leading" constant="15" id="vhA-d9-TrY"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
@@ -89,6 +100,7 @@
                                     <outlet property="imageCoverView" destination="lk3-bX-gzb" id="8sl-4X-9jy"/>
                                     <outlet property="imageView" destination="qUB-oE-1mN" id="mpO-s4-J8J"/>
                                     <outlet property="imageViewConstraintHeight" destination="Nhx-tC-FGm" id="yCG-I8-tSJ"/>
+                                    <outlet property="menuButton" destination="gYb-nE-eP3" id="boz-rV-Js6"/>
                                     <outlet property="promoButton" destination="Wfq-hb-dei" id="lbS-ZT-UX7"/>
                                     <outlet property="titleLabel" destination="jET-7V-zUG" id="rd9-J8-Kri"/>
                                     <outlet property="titleLabelConstraintHeight" destination="EUn-dq-oNH" id="1CV-Hd-sgl"/>
@@ -108,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="158" y="131"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Details Controller-->
         <scene sceneID="F1i-Ig-7YQ">
             <objects>
-                <viewController id="Mga-IO-c8J" customClass="DetailsViewController" customModule="Amaro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mga-IO-c8J" customClass="DetailsController" customModule="Amaro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8eP-aU-IxQ"/>
                         <viewControllerLayoutGuide type="bottom" id="HBH-cS-G88"/>
@@ -120,7 +132,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H71-8i-wLX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H71-8i-wLX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -255,6 +267,7 @@
                                             <outlet property="secondPriceNameLabelConstraintWidth" destination="zkc-Eq-Fvd" id="4LY-V8-Gz8"/>
                                             <outlet property="secondPriceValueLabel" destination="7u6-C1-tOg" id="dYE-tw-fW6"/>
                                             <outlet property="secondPriceValueLabelConstraintHorizontalSpace" destination="ubl-gq-KK6" id="ClF-q7-WPh"/>
+                                            <outlet property="sizeLabel" destination="1Ya-my-cOY" id="QhM-1j-uT8"/>
                                             <outlet property="sizesTextField" destination="vDk-ta-GBl" id="Qcs-23-GCY"/>
                                         </connections>
                                     </tableViewCell>
@@ -282,15 +295,28 @@
                                     <action selector="dismiss" destination="Mga-IO-c8J" eventType="touchUpInside" id="vPU-H4-i8v"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgm-jX-j1s">
+                                <rect key="frame" x="250" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="edM-UR-S5R"/>
+                                    <constraint firstAttribute="width" constant="50" id="yFZ-BW-qSV"/>
+                                </constraints>
+                                <state key="normal" image="checkout-300"/>
+                                <connections>
+                                    <action selector="checkout" destination="Mga-IO-c8J" eventType="touchUpInside" id="ZaH-aK-sd8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Xox-z1-KNz" secondAttribute="trailing" constant="20" id="An2-Xa-zQA"/>
                             <constraint firstItem="Xox-z1-KNz" firstAttribute="top" secondItem="AZi-kl-B4r" secondAttribute="topMargin" constant="24" id="Sbv-84-jS1"/>
+                            <constraint firstAttribute="trailing" secondItem="zgm-jX-j1s" secondAttribute="trailing" constant="20" id="btN-7e-bu0"/>
                             <constraint firstAttribute="bottomMargin" secondItem="H71-8i-wLX" secondAttribute="bottom" id="mfd-iE-87p"/>
                             <constraint firstItem="H71-8i-wLX" firstAttribute="leading" secondItem="AZi-kl-B4r" secondAttribute="leading" id="x1q-gK-8mR"/>
                             <constraint firstAttribute="topMargin" secondItem="H71-8i-wLX" secondAttribute="top" id="yeT-YF-voz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zgm-jX-j1s" secondAttribute="bottom" constant="20" id="ykQ-Y0-9kD"/>
                             <constraint firstAttribute="trailing" secondItem="H71-8i-wLX" secondAttribute="trailing" id="ylM-e8-nN3"/>
                         </constraints>
                     </view>
@@ -300,10 +326,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9R-t9-iZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.375" y="130.98591549295776"/>
+            <point key="canvasLocation" x="908" y="131"/>
+        </scene>
+        <!--Checkout Controller-->
+        <scene sceneID="05y-Iv-9ao">
+            <objects>
+                <viewController storyboardIdentifier="checkout" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eHG-FG-mCe" customClass="CheckoutController" customModule="Amaro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PKj-h7-edB"/>
+                        <viewControllerLayoutGuide type="bottom" id="jDE-6S-Mpd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Q5-HE-5Q8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Gc-9Ng" customClass="CustomButton" customModule="Amaro" customModuleProvider="target">
+                                <rect key="frame" x="270" y="24" width="30" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lxs-ce-sbn"/>
+                                    <constraint firstAttribute="width" constant="30" id="vaJ-XE-AkL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="X"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rounded">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismiss" destination="Mga-IO-c8J" eventType="touchUpInside" id="1B3-z3-VWh"/>
+                                    <action selector="dismiss" destination="eHG-FG-mCe" eventType="touchUpInside" id="O8U-uE-ebQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mhW-Gc-9Ng" secondAttribute="trailing" constant="20" id="0p7-3Y-2FJ"/>
+                            <constraint firstItem="mhW-Gc-9Ng" firstAttribute="top" secondItem="8Q5-HE-5Q8" secondAttribute="topMargin" constant="24" id="zsF-7s-7pm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQl-em-QEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="131"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Menu-100" width="50" height="50"/>
+        <image name="checkout-300" width="150" height="150"/>
         <image name="promo" width="200" height="200"/>
     </resources>
 </document>

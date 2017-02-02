@@ -54,8 +54,12 @@ extension HomeController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath) as! HomeCollectionViewCell
+        
         cell.product = products[indexPath.item]
+        cell.menuButton.isHidden = indexPath.row != 0
+        
         return cell
     }
     
@@ -71,7 +75,7 @@ extension HomeController {
             switch identifier {
             case Segue.details:
                 guard let indexPath = sender as? IndexPath else { return }
-                let controller = segue.destination as? DetailsViewController
+                let controller = segue.destination as? DetailsController
                 controller?.product = products[indexPath.item]
                 break
             default:
