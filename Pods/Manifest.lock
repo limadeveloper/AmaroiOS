@@ -3,16 +3,19 @@ PODS:
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
   - Gloss (1.2.0)
+  - GMStepper (2.0.0)
 
 DEPENDENCIES:
   - AlamofireImage
   - Gloss
+  - GMStepper
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   Gloss: ec49584b2e8144e39810b6db6285433316e0c1c7
+  GMStepper: 6aff0c881afac2f432e5c9b0df71e44e14110a06
 
-PODFILE CHECKSUM: d2d649bdce204ff8b4397e0cc599901ec948c6f4
+PODFILE CHECKSUM: 1d8ce6cd74db690165787d86daa6dec0c4800d46
 
 COCOAPODS: 1.2.0
