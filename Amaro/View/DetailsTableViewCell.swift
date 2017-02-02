@@ -20,6 +20,8 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
     @IBOutlet fileprivate weak var sizeLabel: UILabel!
     @IBOutlet fileprivate weak var sizesTextField: CustomTextField!
     
+    fileprivate var price: String?
+    
     var productImage: UIImage?
     
     var product: Product? {
@@ -27,11 +29,13 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
             
             firstPriceNameLabel.text = "\(Titles.price):"
             secondPriceNameLabel.text = "\(Titles.price):"
-            sizeLabel.text = "\(Titles.sizes):"
+            sizeLabel.text = "\(Titles.size):"
             
             firstPriceValueLabel.text = product?.price
             secondPriceValueLabel.text = product?.pricePromo
             nameLabel.text = product?.name?.uppercased()
+            
+            price = product?.price
             
             if !Product.hasPromo(product: product) {
                 
@@ -58,6 +62,8 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
                 secondPriceNameLabel.text = "\(Titles.newName):"
                 secondPriceNameLabelConstraintWidth.constant = ConstraintValue.second
                 secondPriceValueLabelConstraintHorizontalSpace.constant = ConstraintValue.third
+                
+                price = product?.pricePromo
                 
                 guard let installments = product?.installments, !installments.isEmpty, let pricePromo = product?.pricePromo, !pricePromo.isEmpty else { return }
                 secondPriceValueLabel.text = "\(pricePromo)  (\(installments))"
@@ -114,8 +120,8 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
     // MARK: - DetailsController Delegate
     func detailsControllerGetCheckoutData() -> Checkout? {
         guard let product = product, let sizeName = sizesTextField.text, !sizeName.isEmpty else { return nil }
-        guard let size = Size.getSizeFrom(name: sizeName, and: product) else { return nil }
-        let checkout = Checkout(product: product, size: size)
+        guard let size = Size.getSizeFrom(name: sizeName, and: product), let price = price else { return nil }
+        let checkout = Checkout(product: product, size: size, amount: , price: price)
         return checkout
     }
 }

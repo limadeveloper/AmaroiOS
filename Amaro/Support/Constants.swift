@@ -50,9 +50,11 @@ struct Titles {
     static let price = "Preço"
     static let promoPrice = "Promoção"
     static let total = "Total"
-    static let sizes = "Tamanho"
+    static let size = "Tamanho"
     static let oldName = "De"
     static let newName = "Por"
+    static let myCart = "Carrinho"
+    static let amount = "Quantidade"
 }
 
 struct Messages {

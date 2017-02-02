@@ -8,6 +8,7 @@ target 'Amaro' do
     # Pods for Amaro
     pod 'Gloss'
     pod 'AlamofireImage'
+    pod 'GMStepper'
     
 end
 
