@@ -102,7 +102,7 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
         
         guard let price = stringPrice, let priceValue = Double.currencyNumberFrom(string: price) else { return }
         
-        var product = self.product
+        let product = self.product
         let newPriceValue = priceValue * stepper.value
         
         if  let newPriceString = Double.currencyStringFrom(value: newPriceValue),
@@ -190,7 +190,9 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
     }
     
     // MARK: - DetailsController Delegate
-    func detailsControllerGetCheckoutData() -> Checkout? {
+    func detailsControllerGetCheckoutData() -> [Checkout]? {
+        
+        var result = [Checkout]()
         
         guard let product = product, let sizeName = sizesTextField.text, !sizeName.isEmpty else { return nil }
         guard let size = Size.getSizeFrom(name: sizeName, and: product), let price = price, let amount = product.amount, let originPrice = originPrice else { return nil }
@@ -204,6 +206,11 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
             originPricePromo: originPromoPrice
         )
         
-        return checkout
+        Checkout.addCheckout(object: checkout, forKey: Keys.checkout)
+        
+        guard let array = Checkout.getCheckoutSaved(forKey: Keys.checkout), array.count > 0 else { return nil }
+        result = array
+        
+        return result
     }
 }

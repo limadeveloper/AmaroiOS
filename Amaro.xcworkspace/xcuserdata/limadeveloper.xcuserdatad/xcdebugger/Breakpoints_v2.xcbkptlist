@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amaro/Model/Checkout.swift"
+            timestampString = "507827050.57461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "addCheckout(object:forKey:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Amaro.Checkout.addCheckout (object : Amaro.Checkout, forKey : Swift.String) -&gt; ()"
+                  moduleName = "Amaro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/limadeveloper/Documents/Personal/Amaro/Amaro/Model/Checkout.swift"
+                  timestampString = "507827050.786895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Amaro.Checkout.addCheckout (object : Amaro.Checkout, forKey : Swift.String) -&gt; ()"
+                  moduleName = "Amaro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/limadeveloper/Documents/Personal/Amaro/Amaro/Model/Checkout.swift"
+                  timestampString = "507827050.788852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "424">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

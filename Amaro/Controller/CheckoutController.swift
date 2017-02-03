@@ -28,11 +28,12 @@ class CheckoutController: UIViewController {
     @IBOutlet fileprivate weak var cartProductDetailContainerViewConstraintTop: NSLayoutConstraint!
     @IBOutlet fileprivate weak var cartFinalButton: CustomButton!
     
+    fileprivate var tableData = [Checkout]()
     fileprivate var isDetailVisible = false
-    fileprivate var tableData = [Any]()
+    fileprivate var selectedIndex = Int()
     fileprivate let cellName = "cell"
     
-    var checkout: Checkout?
+    var checkouts: [Checkout]?
     
     fileprivate struct ConstraintValue {
         static let first: CGFloat = 0
@@ -54,8 +55,8 @@ class CheckoutController: UIViewController {
     
     fileprivate func getData() {
         
-        guard let checkout = checkout else { return }
-        tableData = [checkout]
+        guard let checkouts = checkouts else { return }
+        tableData = checkouts
     }
     
     fileprivate func updateUI() {
@@ -67,17 +68,20 @@ class CheckoutController: UIViewController {
         cartProductSizeNameLabel.text = "\(Titles.size):"
         cartProductAmountNameLabel.text = "\(Titles.amount):"
         
+        let backgroundFooter = UIView(frame: .zero)
+        cartTableView.tableFooterView = backgroundFooter
+        cartTableView.backgroundColor = Color.dark
+        cartTableView.reloadData()
+        
+        guard let stringImage = checkouts?[selectedIndex].product?.image, let url = URL(string: stringImage) else { return }
+        backgroundImageView.af_setImage(withURL: url)
+        
         if #available(iOS 10.0, *) {
             backgroundImageView.addBlurEffect(style: .regular)
         }else {
             // Fallback on earlier versions
             backgroundImageView.addBlurEffect()
         }
-        
-        let backgroundFooter = UIView(frame: .zero)
-        cartTableView.tableFooterView = backgroundFooter
-        cartTableView.backgroundColor = Color.dark
-        cartTableView.reloadData()
     }
     
     fileprivate func updateFinalButtonTitle() {
@@ -121,21 +125,20 @@ class CheckoutController: UIViewController {
         updateFinalButtonTitle()
         cartFinalButton.addTarget(self, action: #selector(hideProductDetail), for: .touchUpInside)
         
-        let checkout = tableData[indexPath.row] as? Checkout
+        let checkout = tableData[indexPath.row]
         
-        cartProductNameLabel.text = checkout?.product?.name
-        cartProductPriceLabel.text = checkout?.price
-        cartProductSizeTextField.text = checkout?.size?.size
+        cartProductNameLabel.text = checkout.product?.name
+        cartProductPriceLabel.text = checkout.price
+        cartProductSizeTextField.text = checkout.size?.size
         
-        if let amount = checkout?.amount {
+        if let amount = checkout.amount {
             cartProductAmountTextField.text = "\(amount)"
         }
         
-        tableData = [Any]()
+        tableData = [Checkout]()
         cartTableView.reloadData()
         
-        guard let stringImage = checkout?.product?.image, let url = URL(string: stringImage) else { return }
-        backgroundImageView.af_setImage(withURL: url)
+        guard let stringImage = checkouts?[selectedIndex].product?.image, let url = URL(string: stringImage) else { return }
         cartProductImageView.af_setImage(withURL: url)
     }
     
@@ -154,8 +157,9 @@ class CheckoutController: UIViewController {
         amountLabel.adjustsFontSizeToFitWidth = true
         amountLabel.minimumScaleFactor = 0.8
         
-        if  let checkout = tableData[indexPath.row] as? Checkout,
-            let productName = checkout.product?.name,
+        let checkout = tableData[indexPath.row]
+        
+        if  let productName = checkout.product?.name,
             let price = checkout.price,
             let amount = checkout.amount {
             
@@ -198,6 +202,7 @@ extension CheckoutController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - TableView Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        selectedIndex = indexPath.row
         showProductDetail(indexPath: indexPath)
     }
 }

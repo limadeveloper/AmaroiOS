@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 
 protocol DetailsControllerDelegate {
-    func detailsControllerGetCheckoutData() -> Checkout?
+    func detailsControllerGetCheckoutData() -> [Checkout]?
 }
 
 class DetailsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -53,8 +53,8 @@ class DetailsController: UIViewController, UITableViewDataSource, UITableViewDel
         let storyboard = UIStoryboard(name: UI.StoryboardName.main, bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: UI.ControllerIdentifier.checkout) as? CheckoutController
         
-        let checkout = delegate?.detailsControllerGetCheckoutData()
-        controller?.checkout = checkout
+        let checkouts = delegate?.detailsControllerGetCheckoutData()
+        controller?.checkouts = checkouts
         
         if let controller = controller {
             present(controller, animated: true, completion: nil)

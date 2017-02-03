@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  Global.swift
 //  Amaro
 //
 //  Created by John Lima on 01/02/17.
@@ -79,7 +79,10 @@ struct UI {
     }
 }
 
+struct Keys {
+    static let checkout = "checkout"
+}
+
 enum JsonFile: String {
     case products = "products"
 }
-

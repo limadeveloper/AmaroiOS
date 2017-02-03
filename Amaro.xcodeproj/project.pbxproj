@@ -19,7 +19,7 @@
 		8252BB471E420EBE00E4E44D /* AmaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB461E420EBE00E4E44D /* AmaroUITests.swift */; };
 		8252BB581E42130100E4E44D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB571E42130100E4E44D /* Product.swift */; };
 		8252BB5B1E42132700E4E44D /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB5A1E42132700E4E44D /* Size.swift */; };
-		8252BB5D1E42139700E4E44D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB5C1E42139700E4E44D /* Constants.swift */; };
+		8252BB5D1E42139700E4E44D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB5C1E42139700E4E44D /* Global.swift */; };
 		8252BB5F1E4213B900E4E44D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB5E1E4213B900E4E44D /* Extensions.swift */; };
 		8252BB611E4213F400E4E44D /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB601E4213F400E4E44D /* Requests.swift */; };
 		8252BB631E42141600E4E44D /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 8252BB621E42141600E4E44D /* products.json */; };
@@ -72,7 +72,7 @@
 		8252BB481E420EBE00E4E44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8252BB571E42130100E4E44D /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8252BB5A1E42132700E4E44D /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		8252BB5C1E42139700E4E44D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8252BB5C1E42139700E4E44D /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		8252BB5E1E4213B900E4E44D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8252BB601E4213F400E4E44D /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		8252BB621E42141600E4E44D /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				8252BB261E420EBE00E4E44D /* AppDelegate.swift */,
-				8252BB5C1E42139700E4E44D /* Constants.swift */,
+				8252BB5C1E42139700E4E44D /* Global.swift */,
 				8252BB5E1E4213B900E4E44D /* Extensions.swift */,
 				8252BB601E4213F400E4E44D /* Requests.swift */,
 				8252BB621E42141600E4E44D /* products.json */,
@@ -459,7 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8252BB711E42177F00E4E44D /* CustomButton.swift in Sources */,
-				8252BB5D1E42139700E4E44D /* Constants.swift in Sources */,
+				8252BB5D1E42139700E4E44D /* Global.swift in Sources */,
 				8252BB5F1E4213B900E4E44D /* Extensions.swift in Sources */,
 				8238CE721E435A6600C77C48 /* Checkout.swift in Sources */,
 				8252BB681E42167A00E4E44D /* DetailsController.swift in Sources */,
