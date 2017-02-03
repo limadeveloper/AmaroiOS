@@ -83,3 +83,28 @@ extension UIView {
         }
     }
 }
+
+extension Double {
+    
+    static func currencyNumberFrom(string: String) -> Double? {
+        let string = string.replacingOccurrences(of: " ", with: "")
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "pt_BR")
+        if let number = formatter.number(from: string) {
+            let amount = number.doubleValue
+            return amount
+        }
+        return nil
+    }
+    
+    static func currencyStringFrom(value: Double) -> String? {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "pt_BR")
+        if let string = formatter.string(from: NSNumber(value: value)) {
+            return string
+        }
+        return nil
+    }
+}

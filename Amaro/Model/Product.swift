@@ -31,6 +31,7 @@ struct Product: Decodable {
     var discountPercentage: String?
     var installments: String?
     var sizes: [Size]?
+    var amount: Int?
     
     init?(json: JSON) {
         

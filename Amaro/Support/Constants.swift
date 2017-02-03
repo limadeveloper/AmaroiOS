@@ -22,6 +22,7 @@ struct Font {
     }
     
     struct Size {
+        static let verySmall: CGFloat = 13
         static let small: CGFloat = 15
         static let regular: CGFloat = 17
         static let Bigger: CGFloat = 38
@@ -63,6 +64,8 @@ struct Messages {
 
 struct ButtonTitle {
     static let ok = "Ok"
+    static let close = "Fechar"
+    static let pay = "Pagar"
 }
 
 struct UI {

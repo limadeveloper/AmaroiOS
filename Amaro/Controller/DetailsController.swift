@@ -103,6 +103,8 @@ extension DetailsController {
             let cell = tableView.dequeueReusableCell(withIdentifier: detailsCell, for: indexPath) as! DetailsTableViewCell
             cell.productImage = productImage
             cell.product = product
+            cell.originPrice = product?.price
+            cell.originPromoPrice = product?.pricePromo
             cell.detailsController = self
             return cell
         default:
