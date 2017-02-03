@@ -57,6 +57,7 @@ class DetailsController: UIViewController, UITableViewDataSource, UITableViewDel
         controller?.checkouts = checkouts
         
         if let controller = controller {
+            controller.modalPresentationStyle = .formSheet
             present(controller, animated: true, completion: nil)
         }
     }

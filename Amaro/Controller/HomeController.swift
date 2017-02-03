@@ -40,6 +40,19 @@ class HomeController: UICollectionViewController {
         guard let products = Product.getProducts() else { return }
         self.products = products
     }
+    
+    @objc fileprivate func checkout() {
+        
+        let storyboard = UIStoryboard(name: UI.StoryboardName.main, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: UI.ControllerIdentifier.checkout) as? CheckoutController
+        let checkouts = Checkout.getCheckoutSaved(forKey: Keys.checkout)
+        
+        controller?.checkouts = checkouts
+        
+        guard let c = controller else { return }
+        c.modalPresentationStyle = .formSheet
+        self.present(c, animated: true, completion: nil)
+    }
 }
 
 extension HomeController {
@@ -59,6 +72,7 @@ extension HomeController {
         
         cell.product = products[indexPath.item]
         cell.menuButton.isHidden = indexPath.row != 0
+        cell.menuButton.addTarget(self, action: #selector(checkout), for: .touchUpInside)
         
         return cell
     }

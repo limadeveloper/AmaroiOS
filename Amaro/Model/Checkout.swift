@@ -30,7 +30,8 @@ class Checkout: NSObject, NSCoding {
         self.init()
         self.product = aDecoder.decodeObject(forKey: CheckoutKey.product) as? Product
         self.size = aDecoder.decodeObject(forKey: CheckoutKey.size) as? Size
-        self.amount = aDecoder.decodeObject(forKey: CheckoutKey.amount) as? Int
+        self.amount = aDecoder.decodeInteger(forKey: CheckoutKey.amount)
+        self.amount = aDecoder.decodeInteger(forKey: CheckoutKey.amount)
         self.price = aDecoder.decodeObject(forKey: CheckoutKey.price) as? String
         self.originPrice = aDecoder.decodeObject(forKey: CheckoutKey.originPrice) as? String
         self.originPricePromo = aDecoder.decodeObject(forKey: CheckoutKey.originPricePromo) as? String
@@ -62,7 +63,8 @@ extension Checkout {
         
         var array = [Checkout]()
         
-        if let data = UserDefaults.standard.array(forKey: forKey) as? [Checkout], data.count > 0 {
+        if let data = getCheckoutSaved(forKey: forKey), data.count > 0 {
+            array = data
             let duplicates = data.filter({ $0.product?.id == object.product?.id })
             if duplicates.count == 0 {
                 array.append(object)

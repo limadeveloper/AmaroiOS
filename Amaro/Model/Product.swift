@@ -52,11 +52,11 @@ class Product: NSObject, NSCoding, Decodable {
         self.codeColor = aDecoder.decodeObject(forKey: ProductKey.codeColor) as? String
         self.colorName = aDecoder.decodeObject(forKey: ProductKey.colorName) as? String
         self.price = aDecoder.decodeObject(forKey: ProductKey.price) as? String
-        self.hasPromo = aDecoder.decodeObject(forKey: ProductKey.hasPromo) as? Bool
+        self.hasPromo = aDecoder.decodeBool(forKey: ProductKey.hasPromo)
         self.pricePromo = aDecoder.decodeObject(forKey: ProductKey.pricePromo) as? String
         self.discountPercentage = aDecoder.decodeObject(forKey: ProductKey.discountPercentage) as? String
         self.installments = aDecoder.decodeObject(forKey: ProductKey.installments) as? String
-        self.amount = aDecoder.decodeObject(forKey: ProductKey.amount) as? Int
+        self.amount = aDecoder.decodeInteger(forKey: ProductKey.amount)
         self.sizes = aDecoder.decodeObject(forKey: ProductKey.sizes) as? [Size]
     }
     

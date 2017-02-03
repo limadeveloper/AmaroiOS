@@ -22,7 +22,7 @@ class Size: NSObject, NSCoding, Decodable {
     
     required convenience init?(coder aDecoder: NSCoder) {
         self.init()
-        self.available = aDecoder.decodeObject(forKey: SizeKey.available) as? Bool
+        self.available = aDecoder.decodeBool(forKey: SizeKey.available)
         self.size = aDecoder.decodeObject(forKey: SizeKey.size) as? String
         self.sku = aDecoder.decodeObject(forKey: SizeKey.sku) as? String
     }
