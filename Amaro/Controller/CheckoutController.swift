@@ -28,12 +28,12 @@ class CheckoutController: UIViewController {
     @IBOutlet fileprivate weak var cartProductDetailContainerViewConstraintTop: NSLayoutConstraint!
     @IBOutlet fileprivate weak var cartFinalButton: CustomButton!
     
-    fileprivate var tableData = [Checkout]()
+    fileprivate var tableData: ArrayCheckout?
     fileprivate var isDetailVisible = false
     fileprivate var selectedIndex = Int()
     fileprivate let cellName = "cell"
     
-    var checkouts: [Checkout]?
+    var checkouts: ArrayCheckout?
     
     fileprivate struct ConstraintValue {
         static let first: CGFloat = 0
@@ -125,17 +125,17 @@ class CheckoutController: UIViewController {
         updateFinalButtonTitle()
         cartFinalButton.addTarget(self, action: #selector(hideProductDetail), for: .touchUpInside)
         
-        let checkout = tableData[indexPath.row]
+        let checkout = tableData?[indexPath.row]
         
-        cartProductNameLabel.text = checkout.product?.name
-        cartProductPriceLabel.text = checkout.price
-        cartProductSizeTextField.text = checkout.size?.size
+        cartProductNameLabel.text = checkout?.product?.name
+        cartProductPriceLabel.text = checkout?.price
+        cartProductSizeTextField.text = checkout?.size?.size
         
-        if let amount = checkout.amount {
+        if let amount = checkout?.amount {
             cartProductAmountTextField.text = "\(amount)"
         }
         
-        tableData = [Checkout]()
+        tableData = nil
         cartTableView.reloadData()
         
         guard let stringImage = checkouts?[selectedIndex].product?.image, let url = URL(string: stringImage) else { return }
@@ -157,11 +157,11 @@ class CheckoutController: UIViewController {
         amountLabel.adjustsFontSizeToFitWidth = true
         amountLabel.minimumScaleFactor = 0.8
         
-        let checkout = tableData[indexPath.row]
+        let checkout = tableData?[indexPath.row]
         
-        if  let productName = checkout.product?.name,
-            let price = checkout.price,
-            let amount = checkout.amount {
+        if  let productName = checkout?.product?.name,
+            let price = checkout?.price,
+            let amount = checkout?.amount {
             
             priceLabel?.text = price.uppercased()
             nameLabel?.text = productName.uppercased()
@@ -169,7 +169,7 @@ class CheckoutController: UIViewController {
             
             cell?.accessoryView = amountLabel
             
-            guard let stringUrl = checkout.product?.image, let url = URL(string: stringUrl) else { return }
+            guard let stringUrl = checkout?.product?.image, let url = URL(string: stringUrl) else { return }
             photoImageView?.af_setImage(withURL: url)
         }else {
             cell?.accessoryView = nil
@@ -185,6 +185,7 @@ extension CheckoutController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let tableData = tableData else { return 0 }
         return tableData.count
     }
     

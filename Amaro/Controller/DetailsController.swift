@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 
 protocol DetailsControllerDelegate {
-    func detailsControllerGetCheckoutData() -> [Checkout]?
+    func detailsControllerGetCheckoutData() -> ArrayCheckout?
 }
 
 class DetailsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
