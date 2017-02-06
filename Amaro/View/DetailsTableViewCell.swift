@@ -46,9 +46,15 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
             setupWhenPromotion(product: product)
             
             var sizes: [String]? {
-                guard var sizes = product?.sizes, sizes.count > 0 else { return nil }
-                sizes = sizes.filter({ $0.available == true })
-                let result = sizes.map({ $0.size ?? "" }).filter({ !$0.isEmpty }).sorted { $0 > $1 }
+                guard let sizes = product?.sizes, sizes.count > 0 else { return nil }
+                let items = sizes.filter({ $0.available == true })
+                var result = [String]()
+                for size in items {
+                    if let size = size.size, !size.isEmpty {
+                        result.append(size)
+                    }
+                }
+                result = result.sorted { $0 > $1 }
                 return result
             }
             
@@ -190,25 +196,25 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
     }
     
     // MARK: - DetailsController Delegate
-    func detailsControllerGetCheckoutData() -> [Checkout]? {
+    func detailsControllerGetCheckoutData() -> ArrayCheckout? {
         
-        var result = [Checkout]()
+        var result: ArrayCheckout?
         
         guard let product = product, let sizeName = sizesTextField.text, !sizeName.isEmpty else { return nil }
-        guard let size = Size.getSizeFrom(name: sizeName, and: product), let price = price, let amount = product.amount, let originPrice = originPrice else { return nil }
+        guard let size = Size.getSizeFrom(name: sizeName, and: product), let price = price, product.amount > 0, let originPrice = originPrice else { return nil }
         
         let checkout = Checkout(
             product: product,
             size: size,
-            amount: amount, 
+            amount: product.amount,
             price: price,
             originPrice: originPrice,
             originPricePromo: originPromoPrice
         )
         
-        Checkout.addCheckout(object: checkout, forKey: Keys.checkout)
+        Checkout.save(object: checkout)
         
-        guard let array = Checkout.getCheckoutSaved(forKey: Keys.checkout), array.count > 0 else { return nil }
+        guard let array = Checkout.getObjects(), array.count > 0 else { return nil }
         result = array
         
         return result

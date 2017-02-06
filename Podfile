@@ -9,6 +9,7 @@ target 'Amaro' do
     pod 'Gloss'
     pod 'AlamofireImage'
     pod 'GMStepper'
+    pod 'RealmSwift'
     
 end
 

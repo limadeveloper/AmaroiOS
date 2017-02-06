@@ -67,13 +67,17 @@ class PickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
             self.backgroundColor = UIColor(patternImage: image)
         }
         
+        self.autoresizingMask = [.flexibleWidth]
+        
         picker.frame = CGRect(x: 0, y: ToolBar.height, width: self.frame.size.width, height: pickerHeight)
+        picker.autoresizingMask = [.flexibleWidth]
         picker.delegate = self
         picker.dataSource = self
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: ToolBar.height))
         toolbar.isTranslucent = true
         toolbar.barStyle = .black
+        toolbar.autoresizingMask = [.flexibleWidth]
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         

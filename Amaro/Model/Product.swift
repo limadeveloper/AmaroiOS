@@ -7,6 +7,7 @@
 //
 
 import Gloss
+import RealmSwift
 
 fileprivate struct ProductKey {
     static let id = "id"
@@ -27,40 +28,25 @@ fileprivate struct ProductKey {
     static let amount = "amount"
 }
 
-class Product: NSObject, NSCoding, Decodable {
+typealias ArrayProduct = Results<Product>
+
+class Product: Object, Decodable {
     
-    var id: String?
-    var image: String?
-    var name: String?
-    var style: String?
-    var codeColor: String?
-    var colorName: String?
-    var price: String?
-    var hasPromo: Bool?
-    var pricePromo: String?
-    var discountPercentage: String?
-    var installments: String?
-    var sizes: [Size]?
-    var amount: Int?
+    dynamic var id: String?
+    dynamic var image: String?
+    dynamic var name: String?
+    dynamic var style: String?
+    dynamic var codeColor: String?
+    dynamic var colorName: String?
+    dynamic var price: String?
+    dynamic var hasPromo = false
+    dynamic var pricePromo: String?
+    dynamic var discountPercentage: String?
+    dynamic var installments: String?
+    dynamic var amount = 0
+    var sizes = List<Size>()
     
-    required convenience init?(coder aDecoder: NSCoder) {
-        self.init()
-        self.id = aDecoder.decodeObject(forKey: ProductKey.id) as? String
-        self.image = aDecoder.decodeObject(forKey: ProductKey.image) as? String
-        self.name = aDecoder.decodeObject(forKey: ProductKey.name) as? String
-        self.style = aDecoder.decodeObject(forKey: ProductKey.style) as? String
-        self.codeColor = aDecoder.decodeObject(forKey: ProductKey.codeColor) as? String
-        self.colorName = aDecoder.decodeObject(forKey: ProductKey.colorName) as? String
-        self.price = aDecoder.decodeObject(forKey: ProductKey.price) as? String
-        self.hasPromo = aDecoder.decodeBool(forKey: ProductKey.hasPromo)
-        self.pricePromo = aDecoder.decodeObject(forKey: ProductKey.pricePromo) as? String
-        self.discountPercentage = aDecoder.decodeObject(forKey: ProductKey.discountPercentage) as? String
-        self.installments = aDecoder.decodeObject(forKey: ProductKey.installments) as? String
-        self.amount = aDecoder.decodeInteger(forKey: ProductKey.amount)
-        self.sizes = aDecoder.decodeObject(forKey: ProductKey.sizes) as? [Size]
-    }
-    
-    required convenience init?(json: JSON) {
+    convenience required init?(json: JSON) {
         self.init()
         
         guard let name: String = ProductKey.name <~~ json, let style: String = ProductKey.style <~~ json, let codeColor: String = ProductKey.codeColor <~~ json else { return }
@@ -73,7 +59,12 @@ class Product: NSObject, NSCoding, Decodable {
         self.price = ProductKey.regularPrice <~~ json
         self.discountPercentage = ProductKey.discountPercentage <~~ json
         self.installments = ProductKey.installments <~~ json
-        self.sizes = ProductKey.sizes <~~ json
+        
+        if let sizes: [Size] = ProductKey.sizes <~~ json {
+            for size in sizes {
+                self.sizes.append(size)
+            }
+        }
         
         let codeName = name.replacingOccurrences(of: " ", with: "")
         self.id = Product.createId(name: codeName, style: style, codeColor: codeColor)
@@ -82,22 +73,6 @@ class Product: NSObject, NSCoding, Decodable {
             self.pricePromo = ProductKey.actualPrice <~~ json
             self.hasPromo = self.pricePromo != nil
         }
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        if let id = id { aCoder.encode(id, forKey: ProductKey.id) }
-        if let image = image { aCoder.encode(image, forKey: ProductKey.image) }
-        if let name = name { aCoder.encode(name, forKey: ProductKey.name) }
-        if let style = style { aCoder.encode(style, forKey: ProductKey.style) }
-        if let codeColor = codeColor { aCoder.encode(codeColor, forKey: ProductKey.codeColor) }
-        if let colorName = colorName { aCoder.encode(colorName, forKey: ProductKey.colorName) }
-        if let price = price { aCoder.encode(price, forKey: ProductKey.price) }
-        if let hasPromo = hasPromo { aCoder.encode(hasPromo, forKey: ProductKey.hasPromo) }
-        if let pricePromo = pricePromo { aCoder.encode(pricePromo, forKey: ProductKey.pricePromo) }
-        if let discountPercentage = discountPercentage { aCoder.encode(discountPercentage, forKey: ProductKey.discountPercentage) }
-        if let installments = installments { aCoder.encode(installments, forKey: ProductKey.installments) }
-        if let amount = amount { aCoder.encode(amount, forKey: ProductKey.amount) }
-        if let sizes = sizes { aCoder.encode(sizes, forKey: ProductKey.sizes) }
     }
 }
 

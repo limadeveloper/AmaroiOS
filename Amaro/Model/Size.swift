@@ -7,6 +7,7 @@
 //
 
 import Gloss
+import RealmSwift
 
 fileprivate struct SizeKey {
     static let available = "available"
@@ -14,30 +15,22 @@ fileprivate struct SizeKey {
     static let sku = "sku"
 }
 
-class Size: NSObject, NSCoding, Decodable {
+typealias ArraySize = Results<Size>
+typealias ListSize = List<Size>
+
+class Size: Object, Decodable {
     
-    var available: Bool?
-    var size: String?
-    var sku: String?
+    dynamic var available: Bool = true
+    dynamic var size: String?
+    dynamic var sku: String?
     
-    required convenience init?(coder aDecoder: NSCoder) {
+    convenience required init(json: JSON) {
         self.init()
-        self.available = aDecoder.decodeBool(forKey: SizeKey.available)
-        self.size = aDecoder.decodeObject(forKey: SizeKey.size) as? String
-        self.sku = aDecoder.decodeObject(forKey: SizeKey.sku) as? String
-    }
-    
-    required convenience init(json: JSON) {
-        self.init()
-        self.available = SizeKey.available <~~ json
+        
+        if let available: Bool = SizeKey.available <~~ json { self.available = available }
+        
         self.size = SizeKey.size <~~ json
         self.sku = SizeKey.sku <~~ json
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        if let available = available { aCoder.encode(available, forKey: SizeKey.available) }
-        if let size = size { aCoder.encode(size, forKey: SizeKey.size) }
-        if let sku = sku { aCoder.encode(sku, forKey: SizeKey.sku) }
     }
 }
 
@@ -48,8 +41,7 @@ extension Size {
     }
     
     static func getSizeFrom(name: String, and product: Product) -> Size? {
-        guard let sizes = product.sizes, sizes.count > 0 else { return nil }
-        let size = sizes.filter({ $0.size == name }).first
+        let size = product.sizes.filter({ $0.size == name }).first
         return size
     }
 }

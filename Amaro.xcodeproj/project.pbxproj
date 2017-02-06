@@ -31,6 +31,7 @@
 		8252BB711E42177F00E4E44D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB701E42177F00E4E44D /* CustomButton.swift */; };
 		8252BB731E421F7700E4E44D /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB721E421F7700E4E44D /* PickerView.swift */; };
 		8252BB771E4256D000E4E44D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252BB761E4256D000E4E44D /* CustomTextField.swift */; };
+		828EB56A1E480C1600D0E51E /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828EB5691E480C1600D0E51E /* ModelManager.swift */; };
 		82A49AFE1E42D1520006929D /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A49AFD1E42D1520006929D /* CustomLabel.swift */; };
 		82A49B001E42D69A0006929D /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A49AFF1E42D69A0006929D /* CheckoutController.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		8252BB721E421F7700E4E44D /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		8252BB741E4247B900E4E44D /* playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = playground.playground; sourceTree = "<group>"; };
 		8252BB761E4256D000E4E44D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		828EB5691E480C1600D0E51E /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		82A49AFD1E42D1520006929D /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		82A49AFF1E42D69A0006929D /* CheckoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
 		A23FEE86F37BB0EABFFC797E /* Pods_Amaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Amaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 		8252BB591E42130800E4E44D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				828EB5691E480C1600D0E51E /* ModelManager.swift */,
 				8252BB571E42130100E4E44D /* Product.swift */,
 				8252BB5A1E42132700E4E44D /* Size.swift */,
 				8238CE711E435A6600C77C48 /* Checkout.swift */,
@@ -477,6 +480,7 @@
 				8252BB731E421F7700E4E44D /* PickerView.swift in Sources */,
 				8252BB6D1E42171A00E4E44D /* PhotoTableViewCell.swift in Sources */,
 				8252BB771E4256D000E4E44D /* CustomTextField.swift in Sources */,
+				828EB56A1E480C1600D0E51E /* ModelManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,7 @@ class HomeController: UICollectionViewController {
         
         let storyboard = UIStoryboard(name: UI.StoryboardName.main, bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: UI.ControllerIdentifier.checkout) as? CheckoutController
-        let checkouts = Checkout.getCheckoutSaved(forKey: Keys.checkout)
+        let checkouts = Checkout.getObjects()
         
         controller?.checkouts = checkouts
         

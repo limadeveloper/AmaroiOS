@@ -4,18 +4,26 @@ PODS:
     - Alamofire (~> 4.1)
   - Gloss (1.2.0)
   - GMStepper (2.0.0)
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
+  - RealmSwift (2.4.2):
+    - Realm (= 2.4.2)
 
 DEPENDENCIES:
   - AlamofireImage
   - Gloss
   - GMStepper
+  - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   Gloss: ec49584b2e8144e39810b6db6285433316e0c1c7
   GMStepper: 6aff0c881afac2f432e5c9b0df71e44e14110a06
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
 
-PODFILE CHECKSUM: 1d8ce6cd74db690165787d86daa6dec0c4800d46
+PODFILE CHECKSUM: a39c05779716867c9900e3029559fef7d534c36f
 
 COCOAPODS: 1.2.0
