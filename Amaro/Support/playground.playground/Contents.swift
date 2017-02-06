@@ -13,3 +13,4 @@ let array = [
 let sizes = array.map({ $0["size"] as? String ?? "" }).filter({ !$0.isEmpty }).sorted { $0 > $1 }
 
 print(sizes)
+

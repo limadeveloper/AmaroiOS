@@ -73,7 +73,8 @@ class CheckoutController: UIViewController {
         cartTableView.backgroundColor = Color.dark
         cartTableView.reloadData()
         
-        guard let stringImage = checkouts?[selectedIndex].product?.image, let url = URL(string: stringImage) else { return }
+        guard let checkouts = checkouts, checkouts.count > 0 else { return }
+        guard let stringImage = checkouts[selectedIndex].product?.image, let url = URL(string: stringImage) else { return }
         backgroundImageView.af_setImage(withURL: url)
         
         if #available(iOS 10.0, *) {

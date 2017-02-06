@@ -11,11 +11,11 @@ import RealmSwift
 
 class ModelManager {
     
-    class func getRealm() -> Realm {
-        return try! Realm()
+    class func getRealm() -> Realm? {
+        return try? Realm()
     }
     
     class func getRealmUrl() -> URL? {
-        return ModelManager.getRealm().configuration.fileURL
+        return ModelManager.getRealm()?.configuration.fileURL
     }
 }

@@ -91,7 +91,6 @@ extension HomeController {
                 guard let indexPath = sender as? IndexPath else { return }
                 let controller = segue.destination as? DetailsController
                 controller?.product = products[indexPath.item]
-                break
             default:
                 break
             }

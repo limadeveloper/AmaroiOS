@@ -60,14 +60,13 @@ class Product: Object, Decodable {
         self.discountPercentage = ProductKey.discountPercentage <~~ json
         self.installments = ProductKey.installments <~~ json
         
-        if let sizes: [Size] = ProductKey.sizes <~~ json {
+        if let sizes: [Size] = ProductKey.sizes <~~ json, sizes.count > 0 {
             for size in sizes {
                 self.sizes.append(size)
             }
         }
         
-        let codeName = name.replacingOccurrences(of: " ", with: "")
-        self.id = Product.createId(name: codeName, style: style, codeColor: codeColor)
+        self.id = Product.createId(name: name, style: style, codeColor: codeColor)
         
         if let discountPercentage = self.discountPercentage, !discountPercentage.isEmpty {
             self.pricePromo = ProductKey.actualPrice <~~ json

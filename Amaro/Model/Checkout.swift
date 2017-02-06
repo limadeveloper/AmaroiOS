@@ -6,18 +6,7 @@
 //  Copyright © 2017 limadeveloper. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
-import Gloss
-
-fileprivate struct CheckoutKey {
-    static let product = "product"
-    static let size = "size"
-    static let amount = "amount"
-    static let price = "price"
-    static let originPrice = "originPrice"
-    static let originPricePromo = "originPricePromo"
-}
 
 typealias ArrayCheckout = Results<Checkout>
 
@@ -43,19 +32,25 @@ class Checkout: Object {
 
 extension Checkout {
     
-    static func save(object: Checkout) {
+    static func save(object: Checkout) -> Bool {
+        
+        var saved = false
         let model = ModelManager.getRealm()
-        try! model.write {
-            model.add(object)
+        
+        try? model?.write {
+            model?.add(object)
         }
+        
+        guard let objects = Checkout.getObjects(), objects.count > 0 else { return saved }
+        let objectsSaved = objects.filter({ $0.product?.id == object.product?.id })
+        
+        saved = objectsSaved.count == 1
+        
+        return saved
     }
     
     static func getObjects() -> ArrayCheckout? {
-        let objects = ModelManager.getRealm().objects(Checkout.self)
+        let objects = ModelManager.getRealm()?.objects(Checkout.self)
         return objects
-    }
-    
-    static func removeCheckoutObject(forKey: String) {
-        
     }
 }

@@ -212,7 +212,7 @@ class DetailsTableViewCell: UITableViewCell, PickerViewDelegate, DetailsControll
             originPricePromo: originPromoPrice
         )
         
-        Checkout.save(object: checkout)
+        if !Checkout.save(object: checkout) { return nil }
         
         guard let array = Checkout.getObjects(), array.count > 0 else { return nil }
         result = array
